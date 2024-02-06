@@ -1,8 +1,6 @@
 package main
 
-import (
-	"testing"
-)
+import "testing"
 
 func TestCleanInput(t *testing.T) {
 	cases := []struct {
@@ -34,10 +32,10 @@ func TestCleanInput(t *testing.T) {
 			continue
 		}
 		for i := range actual {
-			word := actual[i]
+			actualWord := actual[i]
 			expectedWord := c.expected[i]
-			if word != expectedWord {
-				t.Errorf("cleanInput(%v) == %v, expected %v", c.input, actual, c.expected)
+			if actualWord != expectedWord {
+				t.Errorf("%v does not equal %v", actualWord, expectedWord)
 			}
 		}
 	}
