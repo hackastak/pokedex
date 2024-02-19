@@ -2,5 +2,7 @@ module pokedexcli
 
 go 1.21.5
 
-require internal/pokeapi v1.0.0
-replace internal/pokeapi => ./internal/pokeapi
+replace github.com/hackastak/pokedexcli/interal/pokeapi v1.0.0 => ./internal/pokeapi
+
+require github.com/hackastak/pokedexcli/internal/pokeapi v1.0.0
+
