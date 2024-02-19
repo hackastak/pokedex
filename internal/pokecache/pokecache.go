@@ -6,8 +6,6 @@ import (
 	"sync"
 )
 
-
-
 type cacheEntry struct {
 	createdAt time.Time
 	value []byte
@@ -19,22 +17,30 @@ type Cache struct {
 }
 
 //New Cache Function
-func NewCache(interval time.Duration) Cache {
-	fmt.Println("create new Cache")
-
-
+func NewCache(interval time.Duration) Cache{
+	c := Cache{
+		cache: make(map[string]cacheEntry),
+		mux: &sync.Mutex{},
+	}
+	go c.reapLoop(interval)
+	
+	return c
 }
 
 //Add to Cache Function
-func (c *Cache) add(key string, value []byte) {
+func (c *Cache) Add(key string, value []byte) {
 	fmt.Println("Add a new entry to the cache")
 	fmt.Println(key)
 	fmt.Println(value)
 }
 
 //Get from Cache Function
-func (c *Cache) get() {
+func (c *Cache) Get(key string) ([]byte, bool) {
 	fmt.Println("Get an entry from the cache")
+	c.mux.Lock()
+	defer c.mux.Unlock()
+	val, ok := c.cache[key]
+	return val.value, ok
 }
 
 //Loop for reaping stale data

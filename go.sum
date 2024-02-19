@@ -1,0 +1,4 @@
+github.com/hackastak/pokedexcli/internal/pokeapi v0.0.0-20240219030936-f348247860c0 h1:dtDaVeaKnT9nUPef3ZwFQUxUkOgusHel6sLbjPy9rQk=
+github.com/hackastak/pokedexcli/internal/pokeapi v0.0.0-20240219030936-f348247860c0/go.mod h1:XedhpaPUmE4/pwJ4zIObLqcSsd9Avp3ug92iaKkgHZw=
+github.com/hackastak/pokedexcli/internal/pokecache v0.0.0-20240219030936-f348247860c0 h1:FX745YU/1uNwLvIrxa/lOpJEjSdQpMTYVjo9D5L4fDo=
+github.com/hackastak/pokedexcli/internal/pokecache v0.0.0-20240219030936-f348247860c0/go.mod h1:8gaAv2XoXfV1UYnGV2wXjB4yOxHC5wV8GRZnAmQz0AE=
