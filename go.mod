@@ -1,8 +1,7 @@
-module pokedexcli
+module github.com/hackastak/pokedexcli
 
-go 1.21.5
+go 1.22.0
 
 replace github.com/hackastak/pokedexcli/interal/pokeapi v1.0.0 => ./internal/pokeapi
 
 require github.com/hackastak/pokedexcli/internal/pokeapi v1.0.0
-
